@@ -25,6 +25,9 @@ public class Main {
         v2();
     }
 
+    /**
+     * 普通方式
+     */
     public static void v1() {
         IOrderService v1 = new OrderServiceV1();
         v1.reminder(orderInfo);
@@ -33,8 +36,11 @@ public class Main {
         v1.reminder(orderInfo);
     }
 
+    /**
+     * 状态模式
+     */
     public static void v2() {
-        OrderServiceV2 v2 = new OrderServiceV2();
+        IOrderService v2 = new OrderServiceV2();
         v2.reminder(orderInfo);
         v2.pay(orderInfo);
         v2.reminder(orderInfo);
